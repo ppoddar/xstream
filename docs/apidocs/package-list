@@ -1,0 +1,6 @@
+xstream
+xstream.cli
+xstream.example
+xstream.ingest
+xstream.spark
+xstream.util
