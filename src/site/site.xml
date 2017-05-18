@@ -1,0 +1,94 @@
+<project xmlns="http://maven.apache.org/DECORATION/1.7.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/DECORATION/1.7.0 
+         http://maven.apache.org/xsd/decoration-1.7.0.xsd"
+         
+         name="xstream: TimeSeries + Oracle NoSQL + Apache Spark">
+
+<bannerLeft>
+    <name>xStream</name>
+    <src>images/xstream_logo.png</src>
+    <href>.</href>
+  </bannerLeft>
+  
+  <bannerRight>
+    <src>images/nosql_logo.gif</src>
+  </bannerRight>
+  
+  <publishDate position="right"/>
+  
+  <version position="right"/>
+  
+  <body>
+    <head>
+    <link rel="stylesheet" href="css/hybrid.css"/>
+    <script src="scripts/highlight.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    </head>
+
+   
+    <menu name="Home">
+      <item name="Overview" href="/about.html"></item>
+      <item name="Source Code" href="/source-repository.html"></item>
+      <item name="Dependencies" href="/dependencies.html"></item>
+    </menu>
+    <menu name="Documentation">
+      <item name="Java API" href="apidocs/index.html"></item>
+      <item name="User Manual" href="user_manual.html"></item>
+      <item name="Reference Manual" href="ref_manual.html"></item>
+    </menu>
+  </body>
+  
+  <skin>
+    <groupId>lt.velykis.maven.skins</groupId>
+    <artifactId>reflow-maven-skin</artifactId>
+    <version>1.1.1</version>
+  </skin>
+  
+  
+  <custom>  
+  <reflowSkin>
+      <skinAttribution>false</skinAttribution>
+      <theme>bootswatch-spacelab</theme>
+      <highlightJs>false</highlightJs>
+      <highlightJsTheme>Hybrid</highlightJsTheme>
+      <brand>
+        <name>xstream</name>
+        <href>http://sleepycat-tools:9000/www/xstream</href>
+      </brand>
+      <slogan>xstream: TimeSeries + Oracle NoSQL + Apache Spark</slogan>
+      <titleTemplate>%2$s | %1$s</titleTemplate>
+      
+      <navbarInverse>true</navbarInverse>
+      <toc>sidebar</toc>
+      <topNav>
+      TimeSeries in Oracle NoSQL with Apache Spark
+      </topNav>
+      <bottomNav>
+        <column>Home</column>
+        <column>Documentation</column>
+       </bottomNav>
+      <bottomDescription>
+      </bottomDescription>
+      <pages>
+        <index project="xstream">
+          <shortTitle>Welcome</shortTitle>
+          <breadcrumbs>true</breadcrumbs>
+          <toc>true</toc>
+          <sections>
+            <carousel />
+            <body />
+            <sidebar />
+            <thumbs>2</thumbs>
+            <columns>3</columns>
+          </sections>
+        </index>
+        <developer-info>
+          <toc>sidebar</toc>
+        </developer-info>
+      </pages>
+    </reflowSkin>
+  </custom>    
+  
+</project>
+

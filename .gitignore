@@ -1,6 +1,11 @@
 # Compiled class file
 *.class
 
+# test resouces 
+/src/test/resources/*
+
+# target
+/target/*
 # Log file
 *.log
 
