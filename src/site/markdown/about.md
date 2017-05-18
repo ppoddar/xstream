@@ -2,6 +2,7 @@
 
 
 A **timeSeries** is a sequence of events ordered by time. 
+
 An **event** is any data with a timestamp.
 
 
@@ -12,15 +13,15 @@ system monitoring etc.
 ## Storing Timeseries
 
 While storing events is not new, the need to collect and analyze massive 
-amounts of sequenced, often unstructured data from thousands or more devices 
+amounts of sequenced, often unstructured data from devices 
 is a new and growing requirement for IoT.
 
-We consider timeseries with following characteristics: 
-+ contains large number of events (could be hundreds of millions)
-+ time is as essential dimension
-+ events carry arbitrary properties and flexible in structure
-+ the information content of events are more meaningful as aggregate 
-than of an individual event. 
+A timeseries is often characterized with following : 
+
+    	+ contains large number of events (could be hundreds of millions)
+	+ time is as essential dimension
+	+ events carry arbitrary properties and flexible in structure
+	+ the information content of events are more meaningful as aggregate than of an individual event. 
   
   
 ### Storage Layout

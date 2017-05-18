@@ -3,31 +3,31 @@
          xsi:schemaLocation="http://maven.apache.org/DECORATION/1.7.0 
          http://maven.apache.org/xsd/decoration-1.7.0.xsd"
          
-         name="xstream: TimeSeries + Oracle NoSQL + Apache Spark">
+         name="xstream">
 
 <bannerLeft>
     <name>xStream</name>
     <src>images/xstream_logo.png</src>
     <href>.</href>
-  </bannerLeft>
+</bannerLeft>
   
-  <bannerRight>
+<bannerRight>
     <src>images/nosql_logo.gif</src>
-  </bannerRight>
+</bannerRight>
   
-  <publishDate position="right"/>
+<publishDate position="right"/>
   
-  <version position="right"/>
+<version position="right"/>
   
-  <body>
-    <head>
+<body>
+  <head>
     <link rel="stylesheet" href="css/hybrid.css"/>
     <script src="scripts/highlight.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    </head>
+  </head>
 
-   
-    <menu name="Home">
+  
+  <menu name="Home">
       <item name="Overview" href="/about.html"></item>
       <item name="Source Code" href="/source-repository.html"></item>
       <item name="Dependencies" href="/dependencies.html"></item>
@@ -37,26 +37,27 @@
       <item name="User Manual" href="user_manual.html"></item>
       <item name="Reference Manual" href="ref_manual.html"></item>
     </menu>
-  </body>
+</body>
   
-  <skin>
+<skin>
     <groupId>lt.velykis.maven.skins</groupId>
     <artifactId>reflow-maven-skin</artifactId>
     <version>1.1.1</version>
-  </skin>
+</skin>
   
   
   <custom>  
   <reflowSkin>
+      <protocolRelativeURLs>true</protocolRelativeURLs>
       <skinAttribution>false</skinAttribution>
       <theme>bootswatch-spacelab</theme>
-      <highlightJs>false</highlightJs>
-      <highlightJsTheme>Hybrid</highlightJsTheme>
+      <highlightJs>true</highlightJs>
+      <highlightJsTheme>github</highlightJsTheme>
       <brand>
         <name>xstream</name>
-        <href>http://sleepycat-tools:9000/www/xstream</href>
+        <href>https://ppoddar.github.io/xstream</href>
       </brand>
-      <slogan>xstream: TimeSeries + Oracle NoSQL + Apache Spark</slogan>
+      <slogan>TimeSeries storage and analysis with Oracle NoSQL and Apache Spark</slogan>
       <titleTemplate>%2$s | %1$s</titleTemplate>
       
       <navbarInverse>true</navbarInverse>
@@ -76,11 +77,7 @@
           <breadcrumbs>true</breadcrumbs>
           <toc>true</toc>
           <sections>
-            <carousel />
             <body />
-            <sidebar />
-            <thumbs>2</thumbs>
-            <columns>3</columns>
           </sections>
         </index>
         <developer-info>

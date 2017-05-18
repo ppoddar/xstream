@@ -25,69 +25,46 @@
 		<name>Oracle Corp.</name>
 		<url>http::/www.oracle.com/</url>
 	</organization>
-	
+
 	<developers>
 		<developer>
 			<name>Pinaki Poddar</name>
 			<organization>Oracle</organization>
 		</developer>
 	</developers>
-	
-	<!--   <url>http://sleepycat-tools.us.oracle.com:9000/</url> -->
-	<url>http://ppoddar.github.io/xstream</url>
-	
+
+	<url>https://ppoddar.github.io/xstream</url>
+
 	<build>
-	<plugins>
-		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-site-plugin</artifactId>
-			<version>3.3</version>
-			<dependencies>
-        
-        <dependency>
-          <groupId>lt.velykis.maven.skins</groupId>
-          <artifactId>reflow-velocity-tools</artifactId>
-          <version>1.1.1</version>
-        </dependency>
-        <!-- Reflow skin requires Velocity >= 1.7  -->
-        <dependency>
-          <groupId>org.apache.velocity</groupId>
-          <artifactId>velocity</artifactId>
-          <version>1.7</version>
-        </dependency>
-        
-      </dependencies>
-		
-		</plugin>
-		<plugin>
-			<groupId>org.codehaus.mojo</groupId>
-			<artifactId>exec-maven-plugin</artifactId>
-			<version>1.6.0</version>
-			<executions>
-				<execution>
-					<goals>
-					<goal>java</goal>
-					</goals>
-				</execution>
-			</executions>
-			<configuration>
-				<executable>java</executable>
-				<arguments>
-					<argument>-classpath</argument><classpath/>
-					<argument>xstream.build.tools.CheckLink</argument>
-					<argument>./target/site/index.html</argument>
-				
-				</arguments>
-			</configuration>
-		</plugin>
-		
-     
-	</plugins>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.3</version>
+				<configuration>
+					<outputDirectory>docs/</outputDirectory>
+				</configuration>
+				<dependencies>
+
+					<dependency>
+						<groupId>lt.velykis.maven.skins</groupId>
+						<artifactId>reflow-velocity-tools</artifactId>
+						<version>1.1.1</version>
+					</dependency>
+					<!-- Reflow skin requires Velocity >= 1.7 -->
+					<dependency>
+						<groupId>org.apache.velocity</groupId>
+						<artifactId>velocity</artifactId>
+						<version>1.7</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+		</plugins>
 	</build>
 
 	<dependencies>
 		<!-- kvstore 4.4.0 is not available in maven repository -->
-		<!-- this dependency is installed locally               -->
+		<!-- this dependency is installed locally -->
 		<dependency>
 			<groupId>com.oracle.kv</groupId>
 			<artifactId>oracle-nosql-client</artifactId>
@@ -103,23 +80,23 @@
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
 			<version>20140107</version>
-		
+
 		</dependency>
 		<dependency>
 			<groupId>org.apache.spark</groupId>
 			<artifactId>spark-sql_2.10</artifactId>
 			<version>2.0.1</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<!-- commons collections require higher version than -->
-		<!-- that of packaged with spark                     -->
+		<!-- that of packaged with spark -->
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-collections4</artifactId>
@@ -127,13 +104,6 @@
 			<scope>compile</scope>
 		</dependency>
 
-		<!-- used for link checking in site building -->
-		<dependency>
-			<groupId>org.jsoup</groupId>
-			<artifactId>jsoup</artifactId>
-			<version>1.10.2</version>
-		</dependency>
-		
 		<!-- used for command line clinet -->
 		<dependency>
 			<groupId>jline</groupId>
@@ -181,6 +151,7 @@
 						<reports>
 							<report>index</report>
 							<report>scm</report>
+							<report>dependencies</report>
 						</reports>
 					</reportSet>
 				</reportSets>
@@ -194,8 +165,8 @@
 		</plugins>
 
 	</reporting>
-	
-	
-	
+
+
+
 
 </project>
